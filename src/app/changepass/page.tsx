@@ -21,7 +21,7 @@ export default function ChangePassPage(){
         try {
             setLoading(true);
 
-            await axios.post('/api/users/changepass',{token, newPass})
+            await axios.post('/api/users/forgotpass',{token, newPass})
             router.push("/login");
         } catch (error:any) {
             setError(true);
