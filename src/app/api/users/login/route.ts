@@ -16,6 +16,7 @@ export async function POST(request: NextRequest) {
 
         // Check if user exists
         const user = await User.findOne({email})
+        console.log("USER:    ",user)
         if(!user){
             return NextResponse.json({error: "User Does Not Exist"}, {status:400});
         }
@@ -49,6 +50,7 @@ export async function POST(request: NextRequest) {
         return response;
 
     } catch (error: any) {
+        console.log(error)
         return NextResponse.json({error: error.message},{status: 500})
     }
 }

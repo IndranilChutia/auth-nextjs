@@ -8,9 +8,7 @@ export const metadata = {
   description: 'Auth App With Email Verification & Reset Password',
 }
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({children}: {
   children: React.ReactNode
 }) {
   return (
